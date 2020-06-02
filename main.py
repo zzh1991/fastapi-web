@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 import uuid
 
@@ -9,8 +10,21 @@ client = MongoClient('localhost', 27017)
 db = client.feedback
 feeds = db.feeds
 
+origins = [
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 class Item(BaseModel):
-    name: str
+    version: str
+    type: str
     description: str = None
 
 @app.post("/feeds")

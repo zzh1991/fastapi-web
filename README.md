@@ -1,5 +1,7 @@
 # FastAPI Web
 
+[![Page Views Count](https://badges.toozhao.com/badges/01EH2FF6J2E771JJSJ6GPF6TBE/green.svg)](https://badges.toozhao.com/badges/01EH2FF6J2E771JJSJ6GPF6TBE/green.svg "Get your own page views count badge on badges.toozhao.com")
+
 - [FastAPI](https://fastapi.tiangolo.com/zh/)
 
 ## Configure
